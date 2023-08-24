@@ -1,1 +1,68 @@
-<p>cart works!</p>
+
+<ng-container *ngIf="true">
+    <div class="cart-container">
+        <div class="cart-item">
+          <img class="item-image" src="assets/laptop.png" alt="Ürün Resmi">
+          <div class="item-details">
+            <div class="item-name">Product Name</div>
+            <div class="item-price">$99.99</div>
+            <div class="item-quantity">Quantity: 2</div>
+          </div>
+          <button class="remove-button" ><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="total-price">Total: $199.98</div>
+      </div>
+</ng-container>
+
+
+
+<!-- <ng-container *ngIf="true">
+   <div class="card-table">
+    <div class="card-product">
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Iphone</td>
+                    <td>Image</td>
+                    <td>yorum</td>
+                    <td>500</td>
+                    <td>2</td>
+                    <td>500</td>
+                    <td>
+                        <button class="btn btn-danger"> <i class="fa-solid fa-xmark"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   </div>
+</ng-container> -->
+
+
+
+<ng-container *ngIf="false">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Cart</h5>
+        </div>
+        <div class="center">
+            <img src="/assets/fcart.png" alt="">
+            <h4>Cart is empty!</h4>
+            <h6>Add item to it now</h6>
+            <button class="btn btn-outline-primary">Shop now</button>
+        </div>
+    </div>
+</ng-container>
