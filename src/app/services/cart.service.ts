@@ -30,7 +30,7 @@ public productList = new BehaviorSubject<any>([])
     this.cartItemList.map((a:any)=>{
       grandTotal += a.total;
     })
-    return grandTotal;
+    return Number(grandTotal.toFixed(2));
   }
   removeCartItem(product :any){
     this.cartItemList.map((a:any,index:any)=>{

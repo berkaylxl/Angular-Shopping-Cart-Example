@@ -60,4 +60,15 @@
     padding: 4px 8px;
     cursor: pointer;
   }
- 
+ .total-price{
+  justify-content: end;
+ }
+.total-price b{
+  color: green;
+}
+.btn-shop{
+  position:relative;
+  top:50%;
+  left:71.5%
+
+}

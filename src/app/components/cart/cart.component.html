@@ -1,22 +1,22 @@
 
-<ng-container *ngIf="true">
-    <div class="cart-container" *ngFor="let item of products; let i = index">
-        <div class="cart-item" >
+<ng-container *ngIf="products.length !=0">
+    <div class="cart-container" >
+        <div class="cart-item" *ngFor="let item of products; let i = index">
           <img class="item-image" src="{{item.image}}" alt="Ürün Resmi">
           <div class="item-details">
             <div class="item-name">{{item.title}}</div>
             <div class="item-price">${{item.price}}</div>
-            <div class="item-quantity">Quantity:{{item.quantity}}</div>
+            <div class="item-quantity">Quantity: {{item.quantity}} </div>
           </div>
           <button class="remove-button" (click)="removeItem(item)" ><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <div class="total-price">Total: ${{item.total}}</div>
-       
+        <div class="total-price d-flex"><b>Total: ${{grandTotal}}</b></div>
       </div>
+      <button routerLink="/products" class="btn btn-outline-primary btn-shop">Shop now</button>
 </ng-container>
 
 
-<ng-container *ngIf="false">
+<ng-container *ngIf="products.length ==0">
     <div class="container">
         <div class="card">
             <h5 class="card-title">My Cart</h5>
@@ -25,7 +25,7 @@
             <img src="/assets/fcart.png" alt="">
             <h4>Cart is empty!</h4>
             <h6>Add item to it now</h6>
-            <button class="btn btn-outline-primary">Shop now</button>
+            <button routerLink="/products" class="btn btn-outline-primary">Shop now</button>
         </div>
     </div>
 </ng-container>
