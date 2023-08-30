@@ -19,10 +19,11 @@ public productList = new BehaviorSubject<any>([])
   }
 
   addtoCart(product : any ){
-    this.cartItemList.push(product);
-    this.productList.next(this.cartItemList);
-    this.getTotalPrice();
-    console.log(this.cartItemList)
+   // let selectedProduct= this.cartItemList.find((item:any) => item.id ===product.id)
+    
+      this.cartItemList.push(product);
+      this.productList.next(this.cartItemList);
+      this.getTotalPrice();
   }
 
   getTotalPrice() :number{
@@ -33,13 +34,16 @@ public productList = new BehaviorSubject<any>([])
     return Number(grandTotal.toFixed(2));
   }
   removeCartItem(product :any){
+    let count=0
     this.cartItemList.map((a:any,index:any)=>{
-      if(product.id===a.id){
+      if(product.id===a.id&& count<1){
         this.cartItemList.splice(index,1);
+        count++;
       }
     })
     this.productList.next(this.cartItemList);
   }
+
   removeAllCart(){
     this.cartItemList=[]
     this.productList.next(this.cartItemList)
