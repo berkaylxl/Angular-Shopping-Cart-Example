@@ -9,7 +9,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class ProductsComponent {
   public productList: any;
-
+  searchKey:string = "";
   constructor(private api: ApiService,private cartService : CartService) {
 
   }
@@ -20,7 +20,11 @@ export class ProductsComponent {
 
       this.productList.forEach((a:any)=>{
         Object.assign(a,{quantity:1,total:a.price})
-      })
+      });
+    });
+    
+    this.cartService.search.subscribe((val:any) => {
+      this.searchKey = val;
     })
   }
   addToCart(item :any){

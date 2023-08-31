@@ -4,8 +4,10 @@
             <i style="font-size: 40px; margin-left:5px;" class="fas fa-shipping-fast"></i>&nbsp;
             <strong  class="title" style="font-size: 30px;"> Shopy</strong>
             <div class="form-group d-flex align-items-center">
-                <input type="text" class="form-control" placeholder="Search...">
+
+                <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search...">
                 <span  class="fas fa-search search-icon"></span>
+
             </div>
         </div>
         <button routerLink="cart"  class="btn btn-primary button-cart">
