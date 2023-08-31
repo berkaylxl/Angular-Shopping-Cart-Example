@@ -1,27 +1,27 @@
 <div class="card-top container-fluid">
     <div class="container d-flex card-top-container mb-4">
         <div class="item">
-            <a>
+            <a (click)="filter('')">
                 <img src="assets/allproducts.png" alt="">
                 <h6>All Products</h6>
             </a>
         </div>
         <div class="item">
-            <a>
+            <a (click)="filter('electronics')">
                 <img src="assets/laptop.png" alt="">
                 <h6>Electronics</h6>
             </a>
         </div>
         <div class="item">
-            <a>
+            <a (click)="filter('fashion')">
                 <img src="assets/dress.png" alt="">
                 <h6>Fashion</h6>
             </a>
         </div>
         <div class="item">
-            <a>
+            <a (click)="filter('jewelery')">
                 <img src="assets/jewelry.png" alt="">
-                <h6>Jewellery</h6>
+                <h6>Jewelery</h6>
             </a>
         </div>
 
@@ -32,7 +32,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <ng-container *ngFor="let item of productList | filter:searchKey:'title'">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
             <div class="card col-md-3">
                 <div class="card-body d-flex justify-content-center align-items-center">
                     <img src="{{item.image}}" alt="">
